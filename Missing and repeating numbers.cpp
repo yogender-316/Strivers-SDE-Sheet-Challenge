@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
+using namespace std;
 pair<int,int> missingAndRepeating(vector<int> &arr, int n)
 {
 	// Write your code here 
@@ -40,4 +40,12 @@ pair<int,int> missingAndRepeating(vector<int> &arr, int n)
 		miss=i+1;
 	}
 	return make_pair(miss,extra);
+}
+int main()
+{
+	vector<int> array={1,3,5,8,5,2,7,4,6};
+	pair<int,int> p=missingAndRepeating(array, array.size());
+	cout<<"Missing Number: "<<p.first<<endl;
+	cout<<"Repeating Number:"<<p.second<<endl;
+	return;
 }
